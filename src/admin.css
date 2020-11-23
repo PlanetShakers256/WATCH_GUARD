@@ -1,0 +1,17 @@
+.login {
+    background-color: #152036;
+    margin: auto;
+    padding: 48px 20px;
+    border: 1px solid #888;
+    width: 50%;
+    height: 420px;
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+}
+
+input {
+    width: 82%;
+    padding: 8px 32px;
+}
+
