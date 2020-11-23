@@ -7,6 +7,14 @@ Read the [concept paper](Concept.md) for more details.
 
 ## DEMO
 
+![Landing Page](assets/front-page.png)
+
+[Live Demo](https://planetshakers256.github.io/WATCH_GUARD/src/)
+
+[Recorded Demo](https://youtu.be/BCIdtjKa6Cc)
+
+[PITCH](https://docs.google.com/presentation/d/1ToIFupXvmyTDh1knopSA9xRLvFPpbKX8LwVZRbb_ZKk/edit?usp=sharing)
+
 ### Features
 
 1. Reporting
@@ -27,30 +35,47 @@ Processing of rewards in crypto to whistleblowers whose claims are successfully 
 
 ## Built On
 
-1. [HTML]()/[CSS]() - to design the interface.
-2. [JavaScript]() - to interact with the smart contracts.
+1. [HTML](https://www.w3schools.com/html/html_intro.asp)/[CSS](https://www.w3schools.com/css/) - to design the interface.
+2. [JavaScript](https://www.w3schools.com/js/DEFAULT.asp) - to interact with the smart contract.
 3. [Solidity](https://docs.soliditylang.org/en/v0.7.4/) - to write smart contracts.
 
 
 ## Installation
 
-1. Install (nodejs/npm)[]
+1. Install [nodejs/npm](https://nodejs.org/en/)
 2. Clone this repository `git clone https://github.com/PlanetShakers256/WATCH_GUARD.git`
 3. Run `npm install` to install all dependencies
 
 ## Usage 
-1. Run `node ` to generate an account.
-2. Save the address
-3. [Credit](https://celo.org/developers/faucet) the account with test celo (holds no real world economic value.)
-4. Use tha address for your transactions
-Add [metamask](https://metamask.io/) to your browser - to connect to and interact with the network.
+### Deply locally
+1. Run `ganache-cli --port 7545` to start the network.
+2. Deploy the contract by running `truffle migrate`.
 
-1. Start the network with `ganache-cli --port 7545`
-`truffle migrate --network alfajores` - to operate on the alfajores test network `truffle migrate` - to operate on the locally.
-2. Start the server with `npm run dev`
-3. 
+>Run `truffle console` to interact with the smart contract/blockchain.
 
-## Roadmap
+>Create an instance of the contract e.g `contract = await ReportCase.deployed()`
+
+>Use this instance to call functions.
+
+OR
+
+> Run `npm run dev` to interact with the contract on a web browser.
+
+> Add [metamask](https://metamask.io/) to your browser - to connect to and interact with the network.
+
+> [Credit](https://celo.org/developers/faucet) your account with some test CELO.
+
+> Perform actions e.g. create and view a claim.
+
+## Future Considerations
+
+1. Incorporation of a rewarding system into the network - using cryptocurrencies without the need for a whistleblower to physically present themselves or any more information about themselves to those who need to issue a reward upon a successful investigation.
+2. Capability of using the [structured] information collected over a period of time to perform valuable analytics.
+3. Integration with other government systems to allow for the possibility of analysis of data flowing through these systems. The results of this analysis could give insight into multiple groups of information and perform a certain set of actions, and when the system becomes smart enough, flag inconsistencies and alert those in charge.
+4. Addition of a chatbot to support users of the system.
+5. Multilanguage support
+6. Secure mailing system to notify the user of activity, inplace of having to check every couple of days.
+7. Creation of randomly generated numbers (using [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf-api-reference)) that will be used by whistleblowers to track their lodged cases.
 
 ## Contributing
 
