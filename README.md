@@ -7,7 +7,8 @@ Read the [concept paper](Concept.md) for more details.
 
 ## DEMO
 
-![Landing Page](assets/front-page.png)
+<span style="display:block;text-align:center;margin:auto"><img width="850" src="assets\front-page.png"></span>
+
 
 [Live Demo](https://planetshakers256.github.io/WATCH_GUARD/src/)
 
