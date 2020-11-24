@@ -1,6 +1,6 @@
 # WATCH GUARD
 <!-- <span style="display:block;text-align:center">![Watch guard](assets\watchguard_logo.png)</span> -->
-<span style="display:block;text-align:center"><img width="250" src="assets\watchguard_logo.png"></span>
+<span style="display:block;text-align:center;margin:auto"><img width="250" src="assets\watchguard_logo.png"></span>
 
 Watch guard is a whistleblowing DApp (decentralised application) that allows whistleblowers to lodge claims against corrupt governement officials/employees/institutions/organisations/agencies. The system allows a user to track their lodged claims to view the status. A claim can be Submitted, Received, Active, Unsuccessful/Closed or Successful/Completed.
 Read the [concept paper](Concept.md) for more details. 
@@ -11,7 +11,7 @@ Read the [concept paper](Concept.md) for more details.
 
 [Live Demo](https://planetshakers256.github.io/WATCH_GUARD/src/)
 
-[Recorded Demo](https://youtu.be/BCIdtjKa6Cc)
+[Recorded Demo](https://youtu.be/YULmSC0Y2Q8)
 
 [PITCH](https://docs.google.com/presentation/d/1ToIFupXvmyTDh1knopSA9xRLvFPpbKX8LwVZRbb_ZKk/edit?usp=sharing)
 
