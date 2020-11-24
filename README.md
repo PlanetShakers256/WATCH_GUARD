@@ -7,7 +7,7 @@ Read the [concept paper](Concept.md) for more details.
 
 ## DEMO
 
-<span style="display:block;text-align:center;margin:auto"><img width="850" src="assets\front-page.png"></span>
+<span style="display:block;text-align:center;margin:auto"><img width="850" src="assets\front-page.PNG"></span>
 
 
 [Live Demo](https://planetshakers256.github.io/WATCH_GUARD/src/)
