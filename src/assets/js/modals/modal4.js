@@ -1,11 +1,11 @@
-function modal4() {   // Get the modal
+function modal4() {   
+    // Get the modal
     document.querySelector("body").style.overflowY = 'hidden';
-    let title = document.getElementById("title").value;
-    let tt = document.getElementById("tt");
-    tt.innerHTML = title;
+
+    document.getElementById("tt").innerHTML = document.getElementById("title").value;
     document.getElementById("inst").innerHTML = document.getElementById("institution").value
     document.getElementById("dpt").innerHTML = document.getElementById("department").value
-    // document.getElementById("impl").innerHTML = document.getElementById("implicated").value
+    document.getElementById("impl").innerHTML = document.getElementById("implicated").value
     document.getElementById("sttt").innerHTML = document.getElementById("statement").value
     document.getElementById("ev").innerHTML = document.getElementById("evidence").value
 

@@ -38,7 +38,8 @@
             color: white;
         }
 
-        .dataTables_wrapper .dataTables_length select, .dataTables_wrapper .dataTables_filter input  {
+        .dataTables_wrapper .dataTables_length select,
+        .dataTables_wrapper .dataTables_filter input {
             background-color: white;
         }
     </style>
@@ -68,8 +69,7 @@
 
             <div class="logo float-left">
                 <h1 class="text-light"><a href="adminMain.html"><span>Watch Guard</span></a></h1>
-                <!-- Uncomment below if you prefer to use an image logo -->
-                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+                <!-- <a href="index.html"><img src="assets/img/watchguard_logo.png" alt="" class="img-fluid"></a> -->
             </div>
 
             <nav class="nav-menu float-right d-none d-lg-block">
@@ -110,9 +110,7 @@
                     <div class="col-lg-8 entries">
 
                         <article class="entry">
-                            <div id="loader" class="text-center">
-                                <p class="text-center">..Loading...</p>
-                            </div>
+
 
                             <div class="entry-content">
                                 <table id="myTable" style="color: white;">
@@ -125,6 +123,8 @@
                                             <th>Date Lodged</th>
                                             <th>Status</th>
                                             <th></th>
+                                            <th></th>
+
                                         </tr>
                                     </thead>
                                     <tbody class="caseTemplate" id="tcontent">
@@ -135,7 +135,9 @@
                                             <td class="impl"></td>
                                             <td class="date"></td>
                                             <td class="status"></td>
-                                            <td class="updateBtn"><button class="updt">Update</button></td>
+                                            <td class="updateBtn"></td>
+                                            <td class="downloadBtn"></td>
+
                                         </tr>
                                     </tbody>
                                 </table>
@@ -146,23 +148,16 @@
 
 
                     </div><!-- End blog entries list -->
-
-                    <div class="col-lg-4">
-                        <div class="sidebar">
-
-                            <h3 class="sidebar-title">Search</h3>
-                            <div class="sidebar-item search-form">
-                                <form action="">
-                                    <input type="text">
-                                    <button type="submit"><i class="icofont-search"></i></button>
-                                </form>
-                            </div><!-- End sidebar search formn-->
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-3">
+                        <div class="sidebar" style="padding: 29px 62px;
+                        margin: 0 0 60px 117px;">
 
                             <h3 class="sidebar-title">Categories</h3>
                             <div class="sidebar-item categories">
                                 <ul>
-                                    <li><a href="#">All <span></span></a></li>
-                                    <li><a href="#">Pending <span></span></a></li>
+                                    <li><a href="#">All (10)<span></span></a></li>
+                                    <li><a href="#" style="font-weight: 600;">Pending (10) <span></span></a></li>
                                     <li><a href="#">Active <span></span></a></li>
                                     <li><a href="#">Successful/Completed <span></span></a></li>
                                     <li><a href="#">Unsuccessful/Closed <span></span></a></li>
@@ -184,10 +179,6 @@
 
     <!-- ======= Footer ======= -->
     <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
-
-
-
-
         <div class="container">
             <div class="copyright">
                 &copy; Copyright <strong><span>Moderna</span></strong>. All Rights Reserved
@@ -222,8 +213,10 @@
 
     <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
 
-    <!-- <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
-    <script src="app.js"></script> -->
+    <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
+    <script src="app.js"></script>
+    <script src="assets/js/updateCase.js"></script>
+
 
 </body>
 

@@ -1,13 +1,13 @@
-function modal6() {   // Get the modal
+function modal6() {   
+    // Get the modal
     document.querySelector("body").style.overflowY = 'hidden';
 
     document.getElementById("myModal5").style.display = "none";
     var modal = document.getElementById("myModal6");
     modal.style.display = "block";
-    console.log("check1")
-    console.log(document.getElementById("loader"))
+
     document.getElementById("loader").style.display = "block";
-    console.log("check2")
+
     App.createTask();
     myFunction()
 

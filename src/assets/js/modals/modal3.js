@@ -1,5 +1,5 @@
-function modal3() {   // Get the modal
-
+function modal3() {   
+    // Get the modal
     document.querySelector("body").style.overflowY = 'hidden';
 
     document.getElementById("myModal2").style.display = "none";

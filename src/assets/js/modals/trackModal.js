@@ -1,5 +1,4 @@
 function trackModal(){
-    console.log("working")
     document.querySelector("body").style.overflowY = 'hidden';
 
     var modal = document.getElementById("myModal7");

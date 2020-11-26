@@ -1,3 +1,66 @@
+/* A CONTRACT KIT VARIATION TO USE 
+   INCORPORATION IS STILL VAGUE
+*/
+
+//
+// Add package imports and setup here
+//
+
+// 1. Import ContractKit
+
+// 2. Init a new kit, connected to the local node @ https://127.0.0.1:7545
+
+import { newKit } from "@celo/contractkit";
+// const ContractKit = require('@celo/contractkit')
+// const kit = newKit('https://127.0.0.1:7545')
+
+const web3Instance = new kit.Web3(new kit.Web3.providers.IpcProvider('https://127.0.0.1:7545', net))
+
+const kit = newKitFromWeb3(web3Instance)
+
+// READ THE CURRENT ACCOUNT
+async function readAccount(){
+    let goldtoken = await kit.contracts.getGoldToken();
+    // A RANDOM TEST ADDRESS
+    let anAddress = '0xD86518b29BB52a5DAC5991eACf09481CE4B0710d';
+    let balance = await goldtoken.balanceOf(anAddress);
+    console.log(`${anAddress} : ${balance.toString()}`)
+}
+
+const getAccount = require('./getAccount').getAccount
+
+// CREATE AN ACCOUNT FOR EACH USER
+async function createAccount(){
+    let account = await getAccount()
+    
+    let goldtoken = await  kit.contracts.getGoldToken()
+    let balance = await goldtoken.balanceOf(account.address)
+
+    console.log(`Your account add: ${account.address}`)
+    console.log(`Your account bal: ${balance.toString()}`)
+}
+
+//
+// Send Gold
+//
+
+async function send(){
+    let account = await getAccount()
+    console.log(account)
+    kit.addAccount(account.privateKey)
+    // RANDOM TEST ADDRESS
+    let anAddress = '0xD86518b29BB52a5DAC5991eACf09481CE4B0710d'
+    let amount = 1000
+    let goldtoken = await kit.contracts.getGoldToken()
+    let tx = await goldtoken.transfer(anAddress, amount).send({from: account.address})
+    let receipt = await tx.waitReceipt()
+    console.log(tx)
+    console.log('Transaction receipt: %o', receipt)
+    let balance = await goldtoken.balanceOf(account.address)
+    console.log(`Your new account balance: ${balance.toString()}`)
+
+}
+
 App = {
     loading: false,
     contracts: {},
@@ -24,17 +87,19 @@ App = {
                 // Request account access if needed
                 await ethereum.enable()
                 // Acccounts now exposed
-                web3.eth.sendTransaction({/* ... */ })
+                // kit.sendTransaction({/* ... */ })
+                kit.web3.eth.sendTransaction({/* ... */ })
+
             } catch (error) {
                 // User denied account access...
             }
         }
         // Legacy dapp browsers...
-        else if (window.web3) {
-            App.web3Provider = web3.currentProvider
-            window.web3 = new Web3(web3.currentProvider)
+        else if (window.web3.kit) {
+            App.web3Provider = kit.web3.currentProvider
+            window.web3 = new Web3(kit.web3.currentProvider)
             // Acccounts always exposed
-            web3.eth.sendTransaction({/* ... */ })
+            kit.web3.eth.sendTransaction({/* ... */ })
         }
         // Non-dapp browsers...
         else {
@@ -44,7 +109,7 @@ App = {
 
     loadAccount: async () => {
         // Set the current blockchain account
-        App.account = web3.eth.accounts[0]
+        App.account = kit.web3.eth.accounts[0]
     },
 
     loadContract: async () => {
@@ -207,3 +272,7 @@ App = {
 $(window).on('load', function () {
     App.load();
 });
+
+readAccount()
+createAccount()
+send()

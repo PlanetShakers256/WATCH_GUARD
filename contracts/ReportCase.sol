@@ -2,13 +2,14 @@
 pragma solidity >=0.4.22 <0.8.0;
 
 // Claim and case are used interchangebly for this prototype
-// Contract logic governing a claim
+// Contract governing a claim, how it is added to and retrieved from the blockchain
 
 contract ReportCase {
     enum Statuses {Submitted, Received, Active, Unsuccessful, Successful}
     // Statuses constant defaultChoice = Statuses.Submitted;
     uint256 public caseCount = 0;
     address payable add = 0xD86518b29BB52a5DAC5991eACf09481CE4B0710d;
+    uint256 balance = 0;
     uint256 dateOfLodge = block.timestamp;
 
     // Structure of a case/claim
@@ -22,10 +23,24 @@ contract ReportCase {
         string evidence;
         Statuses status;
         address payable rewardAddress;
+        uint256 balance;
     }
     mapping(uint256 => Case) public cases;
 
-    // Function to add a claim to the blockchain
+    event CaseCreated(
+        uint256 caseId,
+        string title,
+        uint256 dateOfLodge,
+        string institution,
+        string implicated,
+        string statement,
+        string evidence,
+        Statuses status,
+        address payable rewardAddress,
+        uint256 balance
+    );
+
+    // Add a claim to the blockchain
     function createCase(
         string memory _title,
         string memory _institution,
@@ -43,13 +58,27 @@ contract ReportCase {
             _statement,
             evidence,
             Statuses.Submitted,
-            add
+            add,
+            balance
+        );
+        emit CaseCreated(
+            caseCount,
+            _title,
+            dateOfLodge,
+            _institution,
+            _implicated,
+            _statement,
+            evidence,
+            Statuses.Submitted,
+            add,
+            balance
         );
     }
 
-    // Update the status of a claim from Submitted to Received to Active
-    // No logic available for this step yet
-    // All cases will complete as successful for this prototype
+    /* Update the status of a claim from Submitted to Received to Active
+    THERE IS NO LOGIC AVAILABLE FOR THIS STEP YET
+    All cases will be completed as successful for this prototype */
+
     function updateCase(uint256 _caseId) public {
         if (cases[_caseId].status == Statuses.Submitted) {
             cases[_caseId].status = Statuses.Received;
@@ -61,6 +90,7 @@ contract ReportCase {
     }
 
     constructor() public {
+        /* CREATE AN INITIAL CASE FOR TESTING PURPOSES */
         createCase(
             "DRUG THEFT",
             "MOH",

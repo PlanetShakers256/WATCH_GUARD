@@ -1,6 +1,5 @@
 // ENABLE BUTTONS WHEN CHECKBOXES ARE CHECKED
 
-
 function enableSubmit(val) {
     var sbmt = document.getElementById("proceed");
 

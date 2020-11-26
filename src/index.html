@@ -74,14 +74,17 @@
       <div class="carousel-item active">
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Watch <span>Guard</span></h2>
-          <p class="animate__animated animate__fadeInUp">Witnessed an illegal act performed by your governement? Or do
-            you know of any plans to do so? Report the crime with THE WATCH GUARD</p>
+          <p class="animate__animated animate__fadeInUp">Witnessed an illegal act performed by an entity in your
+            governement? Or do
+            you know of any plans to do so? Report the crime through THE WATCH GUARD</p>
+          <p style="color: #68A4C4;">#BLOW THE WHISTLE</p>
           <p>SECURE | SAFE | TRUSTWORTHY</p>
           <!-- <a href="" class="btn-get-started animate__animated animate__fadeInUp">REPORT NOW</a> -->
           <button class="btn-get-started" id="myBtn" onclick="modal()">REPORT NOW</button>
         </div>
       </div>
 
+      <!-- TERMS AND CONDITIONS -->
       <div id="myModal" class="modal">
 
         <!-- Modal content -->
@@ -91,10 +94,10 @@
             <h5>Terms and Conditions</h5>
             <p style="font-size: 12px;">Please read these terms and conditions carefully before using the Service.</p>
           </div>
-
           <p></p>
-          <div style="overflow-y: scroll; margin: 20px 58px; font-size: 14px;">
 
+          <!-- This is dummy data -->
+          <div style="overflow-y: scroll; margin: 20px 58px; font-size: 14px;">
             <h5>Interpretation and Definitions</h5>
             <h6>Interpretation</h6>
             <p>The words of which the initial letter is capitalized have meanings defined under the following
@@ -239,7 +242,10 @@
             <h5>Contact Us</h5>
             <p>If you have any questions about these Terms and Conditions, You can contact us by email: kxania@gmail.com
             </p>
-          </div><br>
+          </div>
+          <!-- End of dummy data -->
+
+          <br>
           <form action="" style="text-align: center;">
 
             <input type="checkbox" name="tandc" id="" onclick="enableSubmit(this)">
@@ -252,6 +258,7 @@
 
       </div>
 
+      <!-- ATTACH THE TITLE, IMSTITUTION, DEPARTMENT AND RING LEADER -->
       <div id="myModal1" class="modal info">
 
         <!-- Modal content -->
@@ -266,19 +273,23 @@
             onSubmit="App.createTask(); return false;">
             <div class="row">
               <div class="col-lg-3">TITLE</div>
-              <div class="col-lg-9"><input type="text" name="" id="title" placeholder="DRUG THEFT"></div>
+              <div class="col-lg-9"><input type="text" name="" id="title"
+                  placeholder="Give your claim a title e.g. DRUG THEFT"></div>
             </div>
             <div class="row">
               <div class="col-lg-3">INSTITUTION</div>
-              <div class="col-lg-9"><input type="text" name="" id="institution" placeholder="PARLIAMENT"> </div>
+              <div class="col-lg-9"><input type="text" name="" id="institution"
+                  placeholder="What is the key entity? e.g. PARLIAMENT"> </div>
             </div>
             <div class="row">
               <div class="col-lg-3">DEPARTMENT</div>
-              <div class="col-lg-9"><input type="text" name="" id="department" placeholder="Technology"></div>
+              <div class="col-lg-9"><input type="text" name="" id="department"
+                  placeholder="Which department in this entity? e.g. Finance"></div>
             </div>
             <div class="row">
               <div class="col-lg-3">IMPLICATED</div>
-              <div class="col-lg-9"><input type="text" name="" id="implicated" placeholder="John Doe"></div>
+              <div class="col-lg-9"><input type="text" name="" id="implicated"
+                  placeholder="Who is the ring leader? e.g. John Doe"></div>
             </div>
           </form>
           <div class="row bottom">
@@ -288,7 +299,7 @@
         </div>
       </div>
 
-
+      <!-- ATTACH A STATEMENT -->
       <div id="myModal2" class="modal info">
 
         <!-- Modal content -->
@@ -316,6 +327,7 @@
 
       </div>
 
+      <!-- ATTACH EVIDENCE -->
       <div id="myModal3" class="modal info">
 
         <!-- Modal content -->
@@ -329,7 +341,7 @@
           <form action="" class="parts" style="text-align: center; margin: 20px 58px;">
             <div class="row">
               <div class="col-lg-3">EVIDENCE <span style="font-size: 13px; color: thistle;">(*Attachments in form of
-                  documents and images)</span> </div>
+                  pdf documents and images)</span> </div>
               <div class="col-lg-9"><input type="file" name="" id="evidence">
               </div>
             </div>
@@ -342,6 +354,7 @@
 
       </div>
 
+      <!-- PREVIEW OF THE CLAIM TO BE SUBMITTED -->
       <div id="myModal4" class="modal info">
 
         <!-- Modal content -->
@@ -369,7 +382,7 @@
               <div class="row">
                 <div class="col-lg-1 item">REF:</div>
 
-                <div class="col-lg-3 item transform" id="tt"></div>
+                <div class="col-lg-4 item transform" id="tt"></div>
               </div>
             </div>
             <hr style="background-color: black;">
@@ -379,7 +392,7 @@
                 <div class="col-lg-12"><i>AGAINST</i> </div>
               </div>
               <div class="row">
-                <div class="col-lg-12 item transform" id="inst"></div>
+                <div class="col-lg-12 item transform" id="impl"></div>
               </div>
             </div>
 
@@ -388,7 +401,7 @@
                 <div class="col-lg-12">UNDER</div>
               </div>
               <div class="row">
-                <div class="col-lg-12 item transform" id="dpt"></div>
+                <div class="col-lg-12 item transform"><span id="dpt"></span>, <span id="inst"></span> </div>
               </div>
             </div>
 
@@ -419,6 +432,7 @@
 
       </div>
 
+      <!-- INFORMATION ON TRACKING AND REWARDING BEFORE SUBMITTING A CLAIM -->
       <div id="myModal5" class="modal">
 
         <!-- Modal content -->
@@ -463,7 +477,7 @@
       </div>
 
 
-
+      <!-- MODAL GENERATED AFTER SUBMITTING A CLAIM -->
       <div id="myModal6" class="modal">
         <!-- Modal content -->
         <div class="modal-content success" style="text-align: center;">
@@ -482,11 +496,13 @@
             <p style="font-size: 29px; width: 100%;">You are a Hero <i class="fa fa-smile-o" aria-hidden="true"></i></p>
             <br>
             <div class="codeadd" style="font-size: 14px;">
-              <p>Take note of your this code: <span class="return" id="code">t</span>. Use it every time you check the
+              <p>Take note of your this code: <span class="return" id="code">5</span>. Use it every time you check the
                 status of the claim. Navigate to the top right corner and click "Track".
                 you just lodged.</p>
               <br>
-              <p>Take note of your payment address: <span class="return" id="address">t</span>
+              <p>Take note of your payment address pair: <span class="return" id="address"> <br> PUBLIC -
+                  0xed521C4f7A6e9D2825Da3FfbBE39843a027F7642 / PRIVATE -
+                  0xed521C4f7A6e9D2825Da3FfbBE39843a027F7642</span>
               </p>
             </div>
 
@@ -499,6 +515,7 @@
 
       </div>
 
+      <!-- TRACK A CLAIM -->
       <div id="myModal7" class="modal">
         <!-- Modal content -->
         <div class="modal-content" style="text-align: center; height: 347px; margin-top: 50px">
@@ -506,7 +523,9 @@
           <div class="title" style="text-align: center;">
             <h5>TRACK CLAIM <span id="claimno"></span></h5>
           </div>
-          <div id="" style="margin-top: 40px;">
+          <div id="" style="margin-top: 5px;
+          border: 1px solid;
+          padding: 20px;">
             <label for="code">Enter the code number of the case you want to track</label><br><br>
             <input type="text" name="code" id="claimCode" style="width: 82%;
             padding: 8px 32px;">
@@ -518,37 +537,37 @@
 
       </div>
 
+      <!-- RESULT PRODUCED BY THE TRACK -->
       <div id="myModal8" class="modal">
         <!-- Modal content -->
-        <div class="modal-content" style="text-align: center; height: 347px; margin-top: 50px">
+        <div class="modal-content" style="text-align: center; height: 377px; margin-top: 50px">
           <span class="close" id="closeModal8">&times;</span>
           <div id="claimContent">
-            <div id="trial">
+            <div id="trial" style="padding: 20px;
+            border: 1px solid;
+            margin: 20px;">
               <div class="title" style="text-align: center;">
-                <h5>CLAIM NO. <span id="claimno"></span></h5>
-  
-              </div>
-              <div id="" style="margin-top: 60px;">
-                <div class="row" style="margin: 20px;">
-                  <div class="col-lg-6" id="claimtitle"></div>
-                  <div class="col-lg-6"><span>STATUS</span><br><span id="claimstatus"
-                      style="width: 50px; padding: 20px 35px;"></span>
-                  </div>
-                </div>
-              </div>
+                <h5>CLAIM NO. 5<span id="claimno"></span></h5>
 
+              </div>
+              <div id="" style="margin-top: 30px;">
+                <!-- <div class="row" style="margin: 20px;"> -->
+                <div id="claimtitle" style="margin: 30px;">MISUSE OF FUNDS</div>
+                <div id="claimtitle" style="margin: 30px;">Reported on: 24th November 2020</div>
+                <div id="claimstatus"
+                  style="width: 150px; padding: 20px 35px; margin: auto; background-color: lightslategray; border-radius: 3px;">
+                  Submitted</div>
+              </div>
             </div>
-            
-            <button id="submit" onclick="closeModal8()">OK</button>
-
           </div>
-
         </div>
 
       </div>
+    </div>
 
+    </div>
 
-
+    </div>
     </div>
   </section><!-- End Hero -->
 
@@ -690,15 +709,10 @@
 
   <script src="assets/js/fetch.js"></script>
 
-
   <script src="assets/js/loader.js"></script>
-
-
-
 
   <!-- JS Keyup Validators -->
   <script src="assets/js/validate/validateForms.js"></script>
-
 
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 

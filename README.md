@@ -14,7 +14,7 @@ Read the [concept paper](Concept.md) for more details.
 
 [Recorded Demo](https://youtu.be/YULmSC0Y2Q8)
 
-[PITCH](https://docs.google.com/presentation/d/1vCgTEG_NUlX_sR1xGN78GTB8JrIXkjV5lfuGjxdj8AA/edit?usp=sharing)
+Look at the [Problem/solution](https://docs.google.com/presentation/d/1vCgTEG_NUlX_sR1xGN78GTB8JrIXkjV5lfuGjxdj8AA/edit?usp=sharing) statement.
 
 ### Features
 
@@ -25,14 +25,12 @@ Support for .pdf, .png, .jfeg file extensions as evidence.
 2. Claim Tracking
 Claim tracking to view the status of a lodged claim, with the use of a code.
 
-3. Rewarding
-Processing of rewards in crypto to whistleblowers whose claims are successfully completed.
 
 ## Tech Stack
 
 <span style="display:block;text-align:center"><img width="600" src="assets\arch.png"></span>
 
-[CELO Blockchain](https://github.com/celo-org/celo-blockchain) - open cryptographic protocol that allows applications to make transactions with and run smart contracts in a secure and decentralized fashion using the [Contract Kit](https://github.com/celo-org/celo-monorepo/tree/master/packages/contractkit) SDK - a library to help developers and operators of Validator nodes interact with the Celo Blockchain and Celo Core Contracts.
+[CELO Blockchain](https://github.com/celo-org/celo-blockchain) - open cryptographic protocol that allows applications to make transactions with and run smart contracts in a secure and decentralized fashion using the WEB3 and an attempt with [Contract Kit](https://github.com/celo-org/celo-monorepo/tree/master/packages/contractkit) SDK - a library to help developers and operators of Validator nodes interact with the Celo Blockchain and Celo Core Contracts. (Feel free to chip and help with this implementations - Attempt can be found in src/app2.js )
 
 ## Built On
 
@@ -77,6 +75,9 @@ OR
 5. Multilanguage support
 6. Secure mailing system to notify the user of activity, inplace of having to check every couple of days.
 7. Creation of randomly generated numbers (using [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf-api-reference)) that will be used by whistleblowers to track their lodged cases.
+8. Broadcasting of lodged claims to the general public through social media platforms, so that the public can hold the regulatory bodies accountable.
+9. Incorporation of A.I abilities into answering questions to do with "lodging claims in good faith".
+10. Building a mobile application.
 
 ## Contributing
 

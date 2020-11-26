@@ -1,7 +1,7 @@
-var myVar;
+let timer;
 
 function myFunction() {
-  myVar = setTimeout(showPage, 10000);
+  timer = setTimeout(showPage, 10000);
 }
 
 function showPage() {
@@ -9,14 +9,3 @@ function showPage() {
   console.log(document.getElementById("contents"))
   document.getElementById("contents").style.display = "block";
 }
-
-// function myFunction() {
-//   if (App.createTask()) {
-//     document.getElementById("loader").style.display = "none";
-//     document.getElementById("contents").style.display = "block";
-//   }
-// }
-
-// else {
-//   document.getElementById("loader").style.display = "none";
-// }
