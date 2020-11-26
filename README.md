@@ -14,7 +14,7 @@ Read the [concept paper](Concept.md) for more details.
 
 [Recorded Demo](https://youtu.be/YULmSC0Y2Q8)
 
-[PITCH](https://docs.google.com/presentation/d/1ToIFupXvmyTDh1knopSA9xRLvFPpbKX8LwVZRbb_ZKk/edit?usp=sharing)
+[PITCH](https://docs.google.com/presentation/d/1vCgTEG_NUlX_sR1xGN78GTB8JrIXkjV5lfuGjxdj8AA/edit?usp=sharing)
 
 ### Features
 
